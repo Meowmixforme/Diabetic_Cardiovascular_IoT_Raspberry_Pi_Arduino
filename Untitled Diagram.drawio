@@ -25,6 +25,15 @@
         <mxCell id="T3pjwxrUkVl6w-MBTADB-8" value="[Wireless Local Area Network: WiFi]" style="text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;labelPosition=center;verticalLabelPosition=middle;" vertex="1" parent="1">
           <mxGeometry x="290" y="404" width="170" height="20" as="geometry" />
         </mxCell>
+        <mxCell id="T3pjwxrUkVl6w-MBTADB-9" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.thermostat;fillColor=#5294CF;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="680" width="79.5" height="79.5" as="geometry" />
+        </mxCell>
+        <mxCell id="T3pjwxrUkVl6w-MBTADB-10" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.medical_emergency;fillColor=#5294CF;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="90" y="160" width="79.5" height="79.5" as="geometry" />
+        </mxCell>
+        <mxCell id="T3pjwxrUkVl6w-MBTADB-11" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.medical_emergency;fillColor=#5294CF;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="660" y="681" width="79.5" height="79.5" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
