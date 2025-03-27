@@ -85,6 +85,12 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="T3pjwxrUkVl6w-MBTADB-35" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;MAX30102 Pulse Oximeter Sensor&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="779.5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="T3pjwxrUkVl6w-MBTADB-36" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;GY-906 Infrared Temperature Sensor&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="630" y="779.5" width="170" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
