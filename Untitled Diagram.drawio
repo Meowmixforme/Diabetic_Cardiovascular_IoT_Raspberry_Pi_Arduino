@@ -181,7 +181,7 @@
           <mxGeometry x="415" y="328" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="LCU8LbZiW1uKKA8hecsb-8" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#4495D1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.laptop;" vertex="1" parent="1">
-          <mxGeometry x="147.5" y="610" width="65" height="50" as="geometry" />
+          <mxGeometry x="118.75" y="620" width="122.5" height="90" as="geometry" />
         </mxCell>
         <mxCell id="LCU8LbZiW1uKKA8hecsb-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.326;exitY=0.911;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;entryX=0.521;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="T3pjwxrUkVl6w-MBTADB-4" target="LCU8LbZiW1uKKA8hecsb-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -205,13 +205,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="LCU8LbZiW1uKKA8hecsb-15" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Laptop (Arduino IDE)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="125" y="660" width="110" height="30" as="geometry" />
+          <mxGeometry x="125" y="710" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="LCU8LbZiW1uKKA8hecsb-16" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="179.5" y="690" as="sourcePoint" />
-            <mxPoint x="180" y="730" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="LCU8LbZiW1uKKA8hecsb-18" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;[Serial Plotter]&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="140" y="724.75" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LCU8LbZiW1uKKA8hecsb-19" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;[Serial Monitor]&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="140" y="740" width="80" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
