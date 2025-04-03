@@ -13,23 +13,23 @@ float notchPrev = 0;              // Previous output from interference filter
 float movingAverage[WINDOW_SIZE]; // Stores recent ECG values for smoothing
 int windowIndex = 0;              // Tracks position in moving average storage
 
-/**
- * Prepares the filtering system
- * Clears any old values to ensure clean start
- */
+
+ // Prepares the filtering system
+ // Clears any old values to ensure a clean start
+
 void setupFilters() {
   for(int i = 0; i < WINDOW_SIZE; i++) {
     movingAverage[i] = 0;  // Reset all stored values to zero
   }
 }
 
-/**
- * Processes raw ECG signal to remove noise
- * Uses three filtering stages for best results
- * 
- * @param rawValue Unprocessed ECG reading from sensor
- * @return Cleaned ECG signal with clear heart beats
- */
+
+ // Processes raw ECG signal to remove noise
+ // Uses three filtering stages for best results
+ // 
+ // @param rawValue Unprocessed ECG reading from sensor
+ // @return Cleaned ECG signal with clear heart beats
+
 float filterECG(float rawValue) {
   // Stage 1: Smooth out sudden spikes
   // Takes average of recent readings for stability
@@ -58,10 +58,9 @@ float filterECG(float rawValue) {
   return lowPassed;  // Using main filtered signal for best results
 }
 
-/**
- * Initial setup of ECG monitoring system
- * Configures all necessary components
- */
+
+ // Initial setup of ECG monitoring system
+ // Configures all necessary components
 void setup() {
   Serial.begin(9600);            // Start communication with computer
   pinMode(10, INPUT);            // Setup electrode detection (positive)
@@ -69,11 +68,11 @@ void setup() {
   setupFilters();                // Prepare signal cleaning system
 }
 
-/**
- * Main monitoring loop
- * Continuously reads and processes ECG signal
- * Runs 50 times per second for accurate monitoring
- */
+
+ // Main monitoring loop
+ // Continuously reads and processes ECG signal
+ // Runs 50 times per second for accurate monitoring
+
 void loop() {
   // Check if electrodes are properly connected
   if((digitalRead(10) == 1)||(digitalRead(11) == 1)){
