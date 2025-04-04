@@ -13,9 +13,9 @@ import numpy as np
 from scipy.signal import find_peaks
 
 def detect_finger(red_value, ir_value):
-    """
-    Returns True if a finger is detected based on the IR and Red values
-    """
+
+    # Returns True if a finger is detected based on the IR and Red values
+
     # Typical values when no finger is present are around 2000-3000
     # When a finger is present, values are typically much higher (>10000)
     MINIMUM_THRESHOLD = 10000
@@ -32,7 +32,7 @@ def calculate_heart_rate(ir_data, sample_rate=10):
     ir_normalized = ir_data - np.mean(ir_data)
     ir_normalized = ir_normalized / np.max(np.abs(ir_normalized))
     
-    # Find peaks with minimum distance of 0.5 seconds (assuming 10Hz sample rate)
+    # Find peaks with a minimum distance of 0.5 seconds (assuming 10Hz sample rate)
     peaks, _ = find_peaks(ir_normalized, distance=int(sample_rate/2))
     
     if len(peaks) < 2:
@@ -52,9 +52,9 @@ def calculate_heart_rate(ir_data, sample_rate=10):
     return bpm
 
 def calculate_hr_spo2(red_data, ir_data):
-    """
-    Calculate SpO2 and heart rate from red and IR data
-    """
+
+   # Calculate SpO2 and heart rate from red and IR data
+
     if len(red_data) < 100:
         return None, None
         
@@ -79,7 +79,7 @@ def calculate_hr_spo2(red_data, ir_data):
     return spo2, heart_rate
 
 # Initialize sensor
-print("Initializing sensor...")
+print("Initializing sensor")
 sensor = max30102.MAX30102()
 
 # Create arrays to store data
@@ -87,7 +87,7 @@ WINDOW_SIZE = 100
 red_buffer = []
 ir_buffer = []
 
-print("Place your finger on the sensor...")
+print("Place your finger on the sensor")
 try:
     while True:
         red, ir = sensor.read_sequential()
@@ -111,15 +111,15 @@ try:
                 if output:
                     print(" | ".join(output))
                 else:
-                    print("Calculating...")
+                    print("Calculating")
             
             print(f"Raw - Red: {red}, IR: {ir}")
         else:
             red_buffer = []
             ir_buffer = []
-            print("No finger detected! Please place your finger on the sensor.")
+            print("No finger detected! Please place your finger on the sensor")
             
         time.sleep(0.1)  # Sample at 10Hz
 
 except KeyboardInterrupt:
-    print("\nExiting...")
+    print("\nExiting")
