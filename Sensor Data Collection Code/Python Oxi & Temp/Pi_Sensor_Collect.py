@@ -13,7 +13,7 @@ from datetime import datetime
 from pymongo import MongoClient
 
 # Setup MongoDB connection for data storage
-connection_string = "mongodb+srv://mrnuts:v8255920@squirrel-red.uv3sje7.mongodb.net/?retryWrites=true&w=majority"
+connection_string = "mongodb+srv://enterusername:enterpassword@squirrel-red.uv3sje7.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(connection_string)
 db = client['ecg_monitoring']
 collection = db['readings']
@@ -23,17 +23,17 @@ i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
 mlx = adafruit_mlx90614.MLX90614(i2c)
 
 def get_temperature_reading():
-    """
-    Interactive function to capture and validate temperature readings
-    Returns dictionary with ambient and target temperatures
-    """
+
+    # Interactive function to capture and validate temperature readings
+    # Returns dictionary with ambient and target temperatures
+
     while True:
         ready = input("\nReady to take temperature reading? (y/n): ").lower()
         if ready != 'y':
-            print("Okay, waiting until you're ready...")
+            print("Okay, waiting until you're ready")
             continue
             
-        # Get temperature readings with 2 decimal precision
+        # Get temperature readings with 2 decimal places
         ambientTemp = "{:.2f}".format(mlx.ambient_temperature)
         targetTemp = "{:.2f}".format(mlx.object_temperature)
         
@@ -51,25 +51,25 @@ def get_temperature_reading():
                     "validated": True
                 }
             elif validation == 'n':
-                print("Okay, let's try taking the temperature again...")
+                print("Okay, let's try taking the temperature again")
                 break
             else:
                 print("Please enter 'y' for yes or 'n' for no.")
 
 def detect_finger(red_value, ir_value):
-    """
-    Checks if a finger is present on the sensor
-    Uses minimum threshold values for both RED and IR readings
-    """
+
+    # Checks if a finger is present on the sensor
+    # Uses minimum threshold values for both RED and IR readings
+    
     MINIMUM_THRESHOLD = 10000
     return (red_value > MINIMUM_THRESHOLD) and (ir_value > MINIMUM_THRESHOLD)
 
 def calculate_heart_rate(ir_data, sample_rate=10):
-    """
-    Processes IR sensor data to calculate heart rate
-    Uses peak detection to identify heart beats
-    Returns heart rate in BPM or None if calculation fails
-    """
+
+    # Processes IR sensor data to calculate heart rate
+    # Uses peak detection to identify heart beats
+    # Returns heart rate in BPM or None if calculation fails
+
     if len(ir_data) < 100:  # Need minimum data points
         return None
         
@@ -95,10 +95,10 @@ def calculate_heart_rate(ir_data, sample_rate=10):
     return bpm
 
 def calculate_hr_spo2(red_data, ir_data):
-    """
-    Calculates both SpO2 and heart rate from sensor data
-    Uses ratio of RED/IR signals for SpO2 calculation
-    """
+
+    # Calculates both SpO2 and heart rate from sensor data
+    # Uses a ratio of RED/IR signals for SpO2 calculation
+
     if len(red_data) < 100:  # Check for sufficient data
         return None, None
         
@@ -122,10 +122,10 @@ def calculate_hr_spo2(red_data, ir_data):
     return spo2, heart_rate
 
 def upload_reading(reading):
-    """
-    Uploads validated readings to MongoDB
-    Returns True if successful, False if upload fails
-    """
+       
+    # Upload validated readings to MongoDB
+    # Returns True if successful, False if upload fails
+
     try:
         result = collection.insert_one(reading)
         print("Reading uploaded successfully to MongoDB")
@@ -135,7 +135,7 @@ def upload_reading(reading):
         return False
 
 # Main Program Execution
-print("Initializing sensor...")
+print("Initializing sensor")
 sensor = max30102.MAX30102()
 
 # Setup data collection parameters
@@ -143,7 +143,7 @@ WINDOW_SIZE = 100  # Number of samples to collect before processing
 red_buffer = []    # Buffer for RED sensor data
 ir_buffer = []     # Buffer for IR sensor data
 
-print("Starting new monitoring session...")
+print("Starting new monitoring session")
 
 # Initial temperature measurement
 while True:
@@ -160,7 +160,7 @@ if ready != 'y':
     exit()
 
 # Main monitoring loop
-print("\nPlace your finger on the sensor for SpO2 and heart rate...")
+print("\nPlace your finger on the sensor for SpO2 and heart rate")
 try:
     while True:
         # Get new sensor readings
@@ -175,14 +175,14 @@ try:
             red_buffer = red_buffer[-WINDOW_SIZE:]
             ir_buffer = ir_buffer[-WINDOW_SIZE:]
             
-            # Process data when buffer is full
+            # Process data when the buffer is full
             if len(red_buffer) == WINDOW_SIZE:
                 spo2, heart_rate = calculate_hr_spo2(np.array(red_buffer), np.array(ir_buffer))
                 if spo2 is not None and heart_rate is not None:
                     print(f"SpO2: {spo2:.1f}% | Heart Rate: {heart_rate:.0f} BPM")
                     validation = input("Are these readings correct? (y/n): ").lower()
                     if validation == 'y':
-                        # Create complete reading record
+                        # Create a complete reading record
                         reading = {
                             "timestamp": datetime.now(),
                             "spo2": float(f"{spo2:.1f}"),
@@ -196,7 +196,7 @@ try:
                             if retry != 'y':
                                 raise KeyboardInterrupt
                         else:
-                            print("Failed to upload reading. Continuing monitoring...")
+                            print("Failed to upload reading. Continuing monitoring")
                     
                     red_buffer = []  # Reset buffers after processing
                     ir_buffer = []
