@@ -92,6 +92,12 @@
             <mxPoint x="410" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="TEmSRwcLeM4jKB8MVU5H-4" value="HTTPS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="78" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TEmSRwcLeM4jKB8MVU5H-5" value="HTTPS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="590" y="190" width="60" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
