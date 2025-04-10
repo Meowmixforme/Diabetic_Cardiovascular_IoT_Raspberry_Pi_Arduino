@@ -1,6 +1,26 @@
-# Diabetic_Cardiovascular_IoT_Raspberry_Pi_Arduino
+# IoT-Based Cardiovascular Monitoring System for Diabetic Patients
 
+## Overview
+An intelligent IoT solution that provides continuous cardiovascular monitoring for diabetic patients through non-invasive sensors. The system combines hardware sensors, real-time data processing, and machine learning analytics to detect anomalies and track vital sign trends.
 
-Third-year IOT module for university. Streamlit IOT MongoDB solution for monitoring cardiovascular health in diabetic patients
+## Key Features
+- Multi-sensor integration (ECG, Temperature, Heart Rate, SpO2)
+- Real-time vital signs monitoring and visualization
+- Machine Learning-powered analysis:
+  - Anomaly detection using Isolation Forest
+  - Trend analysis with Exponential Smoothing
+  - Health state classification using Random Forest
+- Secure data storage with MongoDB
+- Interactive web dashboard built with Streamlit
 
-This project successfully develops an Internet of Things (IoT) remote cardiovascular monitoring solution for vulnerable diabetic patients. A group who often suffer from a higher risk of circulatory complications. The design employs both a Raspberry Pi 5 to receive readings from a MAX30102 pulse oximeter and a GY-906 infrared temperature sensor, while an Arduino R4 Wi-Fi receives readings from an AD8232 ECG monitor, providing locally non-invasive healthcare receive readings from the patient before being securely transferred using the MQTT protocol to MongoDB Atlas. Three machine learning algorithms then process the records: Isolation Forest is used for anomaly detection, exponential smoothing displays trend analysis, and Random Forest differentiates health state classification. The result is a Streamlit web application with intuitive visualisations that can provide healthcare professionals and patients with valuable information in real-time, which can be used to highlight cardiovascular anomalies. The application demonstrated its capabilities for detecting abnormal cardiac patterns during testing on real patient data. The algorithms effectively identified developing health trends and classified health states. There were limitations discovered during development and testing, including suboptimal Random Forest parameter settings and the MAX30102 sensor being sensitive to ambient light. The IoT application represents a promising approach to remote monitoring, which could potentially reduce hospital readmissions though providing the early detection of cardiovascular complications. 
+## Technical Architecture
+- Dual-controller system (Arduino + Raspberry Pi)
+- Python-based data processing and analysis
+- Web-based visualization and monitoring interface
+- Secure data transmission and storage
+
+## Technologies Used
+- Hardware: Arduino, Raspberry Pi, MAX30102, ECG sensors
+- Backend: Python, MongoDB
+- Frontend: Streamlit
+- ML Libraries: scikit-learn, numpy, pandas
