@@ -5,7 +5,7 @@ An intelligent IoT solution that provides continuous cardiovascular monitoring f
 
 ## Key Features
 - Multi-sensor integration (ECG, Temperature, Heart Rate, SpO2)
-- Real-time vital signs monitoring and visualization
+- Real-time vital signs monitoring and visualisation
 - Machine Learning-powered analysis:
   - Anomaly detection using Isolation Forest
   - Trend analysis with Exponential Smoothing
@@ -16,7 +16,7 @@ An intelligent IoT solution that provides continuous cardiovascular monitoring f
 ## Technical Architecture
 - Dual-controller system (Arduino + Raspberry Pi)
 - Python-based data processing and analysis
-- Web-based visualization and monitoring interface
+- Web-based visualisation and monitoring interface
 - Secure data transmission and storage
 
 ## Technologies Used
