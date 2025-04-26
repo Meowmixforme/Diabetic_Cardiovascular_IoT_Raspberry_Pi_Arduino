@@ -24,3 +24,5 @@ An intelligent IoT solution that provides continuous cardiovascular monitoring f
 - Backend: Python, MongoDB
 - Frontend: Streamlit
 - ML Libraries: scikit-learn, numpy, pandas
+
+[![YouTube Video Thumbnail](https://img.youtube.com/vi/qHUhEyc6Nj8/0.jpg)](https://www.youtube.com/watch?v=qHUhEyc6Nj8)
