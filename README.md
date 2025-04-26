@@ -25,4 +25,6 @@ An intelligent IoT solution that provides continuous cardiovascular monitoring f
 - Frontend: Streamlit
 - ML Libraries: scikit-learn, numpy, pandas
 
+- Click on the thumbnail to view the Demonstration video
+
 [![YouTube Video Thumbnail](https://img.youtube.com/vi/qHUhEyc6Nj8/0.jpg)](https://www.youtube.com/watch?v=qHUhEyc6Nj8)
