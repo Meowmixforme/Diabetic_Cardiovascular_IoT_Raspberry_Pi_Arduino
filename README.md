@@ -20,7 +20,7 @@ An intelligent IoT solution that provides continuous cardiovascular monitoring f
 - Secure data transmission and storage
 
 ## Technologies Used
-- Hardware: Arduino, Raspberry Pi, MAX30102, ECG sensors
+- Hardware: Arduino, Raspberry Pi, MAX30102, GY-906, ECG sensors
 - Backend: Python, MongoDB
 - Frontend: Streamlit
 - ML Libraries: scikit-learn, numpy, pandas
