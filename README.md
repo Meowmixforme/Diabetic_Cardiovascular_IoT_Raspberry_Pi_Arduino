@@ -13,11 +13,19 @@ An intelligent IoT solution that provides continuous cardiovascular monitoring f
 - Secure data storage with MongoDB
 - Interactive web dashboard built with Streamlit
 
+  <img width="1141" height="791" alt="Proposed IoT Cardiac Monitoring System Diagram drawio" src="https://github.com/user-attachments/assets/19fca103-6ee9-4e33-8f40-6bfe94a24c2c" />
+
+
 ## Technical Architecture
 - Dual-controller system (Arduino + Raspberry Pi)
 - Python-based data processing and analysis
 - Web-based visualisation and monitoring interface
 - Secure data transmission and storage
+
+  
+<img width="710" height="590" alt="Transport Layer Diagram drawio" src="https://github.com/user-attachments/assets/3916bc00-7c35-4ec2-8af6-c1f47648db63" />
+
+
 
 ## Technologies Used
 - Hardware: Arduino, Raspberry Pi, MAX30102, GY-906, ECG sensors
