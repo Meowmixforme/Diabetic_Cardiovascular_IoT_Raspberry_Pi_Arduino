@@ -1,5 +1,9 @@
 # IoT-Based Cardiovascular Monitoring System for Diabetic Patients
 
+
+<img width="1024" height="1024" alt="freepik__the-style-is-modern-and-it-is-a-detailed-illustrat__11755" src="https://github.com/user-attachments/assets/e13c131f-5a17-4963-ac9c-2dbb87de035c" />
+
+
 ## Overview
 An intelligent IoT solution that provides continuous cardiovascular monitoring for diabetic patients through non-invasive sensors. The system combines hardware sensors, real-time data processing, and machine learning analytics to detect anomalies and track vital sign trends.
 
