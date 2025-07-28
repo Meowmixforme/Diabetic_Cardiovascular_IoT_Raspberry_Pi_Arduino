@@ -1,7 +1,7 @@
 # IoT-Based Cardiovascular Monitoring System for Diabetic Patients
 
 
-<img width="1024" height="1024" alt="freepik__the-style-is-modern-and-it-is-a-detailed-illustrat__11755" src="https://github.com/user-attachments/assets/e13c131f-5a17-4963-ac9c-2dbb87de035c" />
+<img width="500" height="500" alt="freepik__the-style-is-modern-and-it-is-a-detailed-illustrat__11755" src="https://github.com/user-attachments/assets/e13c131f-5a17-4963-ac9c-2dbb87de035c" />
 
 
 ## Overview
